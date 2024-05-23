@@ -25,3 +25,7 @@ For **Lunix** users:
 
 ### 1.2 Connect your MicroSD and start the Raspberry Pi Imager
 
+  - CHOOSE DEVICE: [**Your Raspberry Pi**]
+  - CHOOSE OS: **Raspberry Pi OS Lite (64-bit)**
+  - CHOOSE STORAGE:[**Your MicroSD card**]
+  - NEXT: "Would you like to apply OS customization settings?" **No, Continue**
