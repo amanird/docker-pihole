@@ -14,7 +14,7 @@ Step-by-step instructions to get a Pi-hole up and running within a Docker contai
 
 For **Windows** and **Mac** users, navigate to: [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/)
 
-For **Lunix** users:
+For **Linux** users:
 
 | Distro                                   | Command                           |
 |------------------------------------------|-----------------------------------|
