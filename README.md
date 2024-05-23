@@ -1,6 +1,6 @@
 # docker-pihole
 Step-by-step instructions to get a Pi-hole up and running within a Docker container.
-###### Note: This tutorial's instructions will be based on using a Raspberry Pi for the server, but you may still use these instructions to make your Pi-hole on an old PC, virtual machine, or hypervisor (Proxmox is a popular option).
+###### Note: This tutorial's instructions will be based on using a Raspberry Pi microcomputer as the server. Alternatively you may use an old PC, virtual machine, or hypervisor (Proxmox is a popular option).
 
 # Materials
 - Raspberry Pi (with power supply)
