@@ -1,22 +1,6 @@
 # docker-pihole
-Step-by-step instructions to get a Pi-hole up and running within a Docker container.
+Step-by-step instructions for building a Pi-hole DNS server inside Docker and with Unbound
 ###### Note: This tutorial's instructions will be based on using a Raspberry Pi microcomputer as the server. Alternatively you may use an old PC, virtual machine, or hypervisor (Proxmox is a popular option).
-
-# 
-
-### Table of Contents
-- [Introduction](#introduction)
-- [Materials](#materials)
-- [Prepare the Raspberry Pi](#step-1-prepare-the-raspberry-pi)
-- [Install Docker](#install-docker)
-- [Update and Upgrade](#step-3-update-and-upgrade)
-- [Step 4: Install Docker](#step-4-install-docker)
-- [Step 5: Create a Docker Network](#step-5-create-a-docker-network)
-- [Step 6: Run Pi-hole and Unbound Containers](#step-6-run-pi-hole-and-unbound-containers)
-- [Step 7: Access Pi-hole Web Interface](#step-7-access-pi-hole-web-interface)
-- [Advanced Configuration](#advanced-configuration)
-- [Troubleshooting](#troubleshooting)
-- [Installing from distribution repositories](#install) 
 
 # Materials
 - Raspberry Pi (with power supply)
@@ -81,7 +65,9 @@ psk="your-network-password"
 Find the IP address of the Raspberry Pi from your router's admin interface. 
 <br>
 
-### SSH into the Raspberry Pi from a terminal on your PC: `ssh pi@<your-pi-ip-address>`
+### SSH into the Raspberry Pi from a terminal on your PC: 
+
+`ssh pi@<your-pi-ip-address>`
 
 Default username: `pi`
 
@@ -179,18 +165,14 @@ sudo docker-compose up -d
 
 <br>
 
-# Step 5: Access Pi-hole admin interface
-### Open a web browser
-Go to `http://<your-pi-ip-address>/admin`
-
-Log in using the password set in the `docker-compose.yml` file
+# Step 5: Access Pi-hole admin interface to configure your network
+Go to `http://<your-pi-ip-address>/admin` on your PC and log in using the password set in the `docker-compose.yml` file.
 
 <br>
 
-# Step 6: Configure your network
 ### Add to your blocklists
 
-Navigate to the `Adlists` tab. You can find or create your own blocklists to suit your needs and preferences, but I used several lists from @WaLLy3K on GitHub at their website [https://firebog.net/](https://firebog.net/).
+Navigate to the `Adlists` tab. You can find or create your own blocklists to suit your needs and preferences. I use several lists from @WaLLy3K on GitHub at their website [https://firebog.net/](https://firebog.net/).
 
 After you've added all your blocklists, navigate to the `Tools` tab and then `Update Gravity` to update and save.
 
