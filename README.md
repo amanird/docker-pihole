@@ -1,6 +1,10 @@
 # docker-pihole
+
 Step-by-step instructions for building a Pi-hole DNS server inside Docker running Unbound all on a Raspberry Pi.
-###### Note: These instructions will be based on using a Raspberry Pi microcomputer as the server. Alternatively you may use an old PC, virtual machine, or hypervisor (Proxmox is a popular option).
+
+*Note: These instructions will be based on using a Raspberry Pi microcomputer as the server. Alternatively you may use an old PC, virtual machine, or hypervisor (Proxmox is a popular option).*
+
+##### Auto-installer coming soon!
 
 <br>
 
@@ -198,13 +202,13 @@ Add to **Custom 1 (IPv4)**: `127.0.0.1#5335`
 # Troubleshooting
 
 Check Docker logs:
-`
+```
 sudo docker logs pihole
 sudo docker logs unbound
-`
+```
 
 Restart containers:
-`
+```
 sudo docker restart pihole
 sudo docker restart unbound
-`
+```
