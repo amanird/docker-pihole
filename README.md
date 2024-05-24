@@ -96,30 +96,30 @@ sudo apt upgrade
 ```
 
 ### Install Docker:
-`
+```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker pi
-`
+```
 
 ### Reboot
-`sudo reboot`
+```sudo reboot```
 
 <br>
 
 # Step 3: Set Up Docker Compose
 ### Install Docker Compose:
-`
+```
 sudo apt install python3-pip
 sudo pip3 install docker-compose
-`
+```
 
 ### Create Docker Compose File:
-`
+```
 mkdir ~/pihole-unbound
 cd ~/pihole-unbound
 nano docker-compose.yml
-`
+```
 
 #### Add the following to `docker-compose.yml`:
 ```
@@ -166,13 +166,13 @@ Save: `Y`
 
 # Step 4: Configure Pi-hole and Unbound
 ### Start the containers:
-`
+```
 cd ~/pihole-unbound
 sudo docker-compose up -d
-`
+```
 
 ### Verify the contaiers are running:
-`sudo docker ps`
+```sudo docker ps```
 
 <br>
 
