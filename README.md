@@ -8,7 +8,7 @@ Step-by-step instructions for building a Pi-hole DNS server inside Docker runnin
 - Raspberry Pi (with power supply)
 - MicroSD card (16GB or larger)
 - Another PC to flash the OS and SSH to the Pi
-- Ethernet (optional, but makes the build a few steps simpler)
+- Ethernet
 - Keyboard and Monitor (optional)
 
 <br>
@@ -27,6 +27,8 @@ For **Linux** users:
 | **CentOS/RHEL** | `sudo yum install rpi-imager` |
 | **Fedora** | `sudo dnf install rpi-imager` |
 | **OpenSUSE** | `sudo zypper install rpi-imager` |
+
+<br>
 
 ### Connect your MicroSD to PC and start the Raspberry Pi Imager
 CHOOSE DEVICE:  **[Your Raspberry Pi]**
@@ -70,8 +72,9 @@ Find the IP address of the Raspberry Pi from your router's admin interface.
 <br>
 
 ### SSH into the Raspberry Pi from a terminal on your PC: 
-
-`ssh pi@<your-pi-ip-address>`
+```
+ssh pi@<your-pi-ip-address>
+```
 
 Default username: `pi`
 
