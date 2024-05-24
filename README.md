@@ -2,7 +2,7 @@
 
 Step-by-step instructions for building a Pi-hole DNS server inside Docker running Unbound all on a Raspberry Pi.
 
-*Note: These instructions will be based on using a Raspberry Pi microcomputer as the server. Alternatively you may use an old PC, virtual machine, or hypervisor (Proxmox is a popular option).*
+*Note: These instructions will be based on using a Raspberry Pi for the server. Alternatively you may use an old PC, virtual machine, or hypervisor (Proxmox is a popular option).*
 
 ##### Auto-installer coming soon!
 
