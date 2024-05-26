@@ -9,11 +9,11 @@ Step-by-step instructions for building a Pi-hole DNS server inside a Docker cont
 <br>
 
 # Prerequisites
-- Raspberry Pi (with power supply)
-- MicroSD card (16GB or larger)
-- PC to flash the OS and SSH to the Pi
+- PC
+- microSD card (16GB or larger)
+- Raspberry Pi (any) with power supply
 - Ethernet
-- Additional Keyboard and Monitor (optional)
+- additional keyboard and monitor (optional)
 
 <br>
 
@@ -34,18 +34,18 @@ For **Linux** users:
 
 <br>
 
-### Connect your MicroSD to PC and start the Raspberry Pi Imager
+### Connect your microSD to PC and start the Raspberry Pi Imager
 CHOOSE DEVICE:  **[Your Raspberry Pi]**
 
 CHOOSE OS:  **Raspberry Pi OS Lite (64-bit)** **OR** a Raspberry Pi OS Lite version compatible with your machine of choice
 
-CHOOSE STORAGE:  **[Your MicroSD card]**
+CHOOSE STORAGE:  **[Your microSD card]**
 
 NEXT: "Would you like to apply OS customization settings?"  **No, Continue**
 
 <br>
 
-After successfully writing the OS to the MicroSD, there will now be a **bootfs** partition and a **rootfs** partition. Go into the **bootfs** partition and create a **new empty file** named `ssh`.
+After successfully writing the OS to the microSD, there will now be a **bootfs** partition and a **rootfs** partition. Go into the **bootfs** partition and create a **new empty file** named `ssh`.
 
 <br>
 
@@ -67,7 +67,7 @@ psk="your-network-password"
    
 ### Set up the Raspberry Pi
 
-#### Insert the MicroSD card, connect to Ethernet, and turn on the Raspberry Pi
+#### Insert the microSD card, connect to Ethernet, and turn on the Raspberry Pi
 *You can **optionally** also connect your extra keyboard and monitor to the Raspberry Pi now and go through with the remaining setup from there, otherwise you can continue.*
 
 <br>
