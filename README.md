@@ -100,7 +100,7 @@ sudo apt upgrade
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
-sudo usermod -aG docker pi
+sudo usermod -aG docker your-pi-username
 ```
 
 ### Reboot
