@@ -161,7 +161,7 @@ Save: `Y`
 |----------------|-----------------------------------|
 | `53:53/tcp`    |DNS queries over TCP. This is used for larger DNS responses that cannot fit in a single UDP packet and for DNS zone transfers.|
 | `53:53/udp`    |DNS queries over UDP. This is the primary method for DNS queries and responses due to its lower overhead compared to TCP.|
-| `67:67/udp`    |DHCP server. This port is used for DHCP (Dynamic Host Configuration Protocol) requests and responses, allowing the server to assign IP addresses to devices on the network.|
+| `67:67/udp`    |DHCP server. This port is used for DHCP requests and responses, allowing the server to assign IP addresses to devices on the network.|
 | `80:80`    |HTTP web interface. This port is used for accessing the Pi-hole admin interface over an unencrypted HTTP connection.|
 | `443:443`    |HTTPS web interface. This port is used for accessing the Pi-hole admin interface over an encrypted HTTPS connection.|
 
