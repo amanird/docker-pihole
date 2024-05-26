@@ -11,9 +11,9 @@ Step-by-step instructions for building a Pi-hole DNS server inside a Docker cont
 # Prerequisites
 - Raspberry Pi (with power supply)
 - MicroSD card (16GB or larger)
-- Another PC to flash the OS and SSH to the Pi
+- PC to flash the OS and SSH to the Pi
 - Ethernet
-- Keyboard and Monitor (optional)
+- Additional Keyboard and Monitor (optional)
 
 <br>
 
