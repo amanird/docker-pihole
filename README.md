@@ -104,7 +104,9 @@ sudo usermod -aG docker pi
 ```
 
 ### Reboot
-```sudo reboot```
+```
+sudo reboot
+```
 
 <br>
 
