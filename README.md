@@ -186,7 +186,7 @@ Go to `http://<your-pi-ip-address>/admin` on your PC and log in using the passwo
 
 ### Add to your blocklists
 
-Navigate to the `Adlists` tab. You can find or create your own blocklists to suit your needs and preferences. I use several lists from @WaLLy3K on GitHub at their website [https://firebog.net/](https://firebog.net/).
+Navigate to the `Adlists` tab. You can find or create your own blocklists to suit your needs and preferences. I use several lists found on [https://firebog.net/](https://firebog.net/), a site from @WaLLy3K on GitHub.
 
 After you've added all your blocklists, navigate to the `Tools` tab and then `Update Gravity` to update and save.
 
