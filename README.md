@@ -36,6 +36,8 @@ For **Linux** users:
 
 ### Connect your microSD to PC and start the Raspberry Pi Imager
 
+*Note: I recommend ensuring your microSD is preformatted before using the Raspberry Pi Imager, as I've had errors in verification with cards that weren't formatted beforehand.*
+
 - **CHOOSE DEVICE:**  **[Your Raspberry Pi]**
 
 - **CHOOSE OS:**  **Raspberry Pi OS Lite (64-bit)** OR a Raspberry Pi OS Lite version compatible with your Pi
@@ -44,13 +46,17 @@ For **Linux** users:
 
 - **NEXT:** "Would you like to apply OS customization settings?"  **No, Continue**
 
+- **Use OS customisation? Would you like to apply OS customisation settings?:** [**EDIT SETTINGS**]
+
+- **Set username and password** Check this box and proceed to make your login credentials.
+
+- **Services** Check the Enable SSH box.
+
 <br>
 
-After successfully writing the OS to the microSD, there will now be a **bootfs** partition and a **rootfs** partition. Go into the **bootfs** partition and create a **new empty file** named `ssh`.
+If you've successfully written and verified the OS flash,... **********************CONTINUE THIS LATER********* <br>
 
-<br>
-
-If you are using Wi-Fi instead of Ethernet we must configure Wi-Fi (Ethernet users can ignore this). Go into the **bootfs** partition and create a **new empty file** named `wpa_supplicant.conf`
+If you are using Wi-Fi instead of Ethernet we must pre-configure Wi-Fi (Ethernet users can ignore this). Go into the **bootfs** partition and create a **new empty file** named `wpa_supplicant.conf`
 
 Paste this content into the file:
 ```
@@ -59,7 +65,7 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
     
 network={
-ssid="your-network-ssid"
+ssid="your-network-ssid(name of the wifi)"
 psk="your-network-password"
 }
 ```
@@ -90,22 +96,24 @@ Change the default password using the `passwd` command.
 <br>
 
 # Step 2: Install Docker
+
 ### Update the system:
 ```
 sudo apt update
 sudo apt upgrade
 ```
 
-### Install Docker:
 ```
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker your-pi-username
+sudo apt install -y docker.io
 ```
 
-### Reboot
 ```
-sudo reboot
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+```
+sudo usermod -aG docker your-pi-username
 ```
 
 <br>
@@ -113,8 +121,11 @@ sudo reboot
 # Step 3: Set Up Docker Compose
 ### Install Docker Compose:
 ```
-sudo apt install python3-pip
-sudo pip3 install docker-compose
+sudo apt install -y docker-compose
+```
+
+```
+docker --version
 ```
 
 ### Create Docker Compose File:
@@ -134,7 +145,7 @@ services:
     container_name: pihole
     environment:
       - TZ=America/New_York
-      - WEBPASSWORD= your-strongest-pihole-password
+      - WEBPASSWORD=your-pihole-password
       - DNS1=127.0.0.1#5335
     ports:
       - "53:53/tcp"
@@ -143,11 +154,22 @@ services:
       - "80:80"
       - "443:443"
     restart: always
+    volumes:
+      - pihole_config:/etc/pihole
+      - dnsmasq_config:/etc/dnsmasq.d
 
   unbound:
     image: mvance/unbound:latest
     container_name: unbound
     restart: always
+    volumes:
+      - unbound_config:/opt/unbound/etc/unbound
+
+volumes:
+  pihole_config:
+  dnsmasq_config:
+  unbound_config:
+
 ```
 Save and exit the nano file:
 
@@ -170,7 +192,7 @@ Save: `Y`
 # Step 4: Configure Pi-hole and Unbound
 ### Start the containers:
 ```
-cd ~/pihole-unbound
+cd ~/pihole-unbound //necessary or no?
 sudo docker-compose up -d
 ```
 
