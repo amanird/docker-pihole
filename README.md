@@ -38,7 +38,7 @@ For **Linux** users:
 
 - **CHOOSE DEVICE:**  **[Your Raspberry Pi]**
 
-- **CHOOSE OS:**  **Raspberry Pi OS Lite (64-bit)** **OR** a Raspberry Pi OS Lite version compatible with your machine of choice
+- **CHOOSE OS:**  **Raspberry Pi OS Lite (64-bit)** OR a Raspberry Pi OS Lite version compatible with your machine of choice
 
 - **CHOOSE STORAGE:**  **[Your microSD card]**
 
