@@ -35,13 +35,14 @@ For **Linux** users:
 <br>
 
 ### Connect your microSD to PC and start the Raspberry Pi Imager
-CHOOSE DEVICE:  **[Your Raspberry Pi]**
 
-CHOOSE OS:  **Raspberry Pi OS Lite (64-bit)** **OR** a Raspberry Pi OS Lite version compatible with your machine of choice
+> CHOOSE DEVICE:  **[Your Raspberry Pi]**
 
-CHOOSE STORAGE:  **[Your microSD card]**
+> CHOOSE OS:  **Raspberry Pi OS Lite (64-bit)** **OR** a Raspberry Pi OS Lite version compatible with your machine of choice
 
-NEXT: "Would you like to apply OS customization settings?"  **No, Continue**
+> CHOOSE STORAGE:  **[Your microSD card]**
+
+> NEXT: "Would you like to apply OS customization settings?"  **No, Continue**
 
 <br>
 
